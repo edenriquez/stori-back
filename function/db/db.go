@@ -18,7 +18,6 @@ import (
 
 var client *dynamodb.Client
 
-// table - shortcode(S, primary key)
 
 const customerIdDynamoDBAttributeName = "customerId"
 const transactionIdDynamoDBAttributeName = "transactionId"

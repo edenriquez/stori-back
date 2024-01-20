@@ -18,8 +18,6 @@ func send_email(to string, totalBalance float64, balances []TxnBalance, avgDebit
 
 	client := resend.NewClient(apiKey)
 
-	// open a html file called template in the same directory and read it as string
-
 	txnDetailsTemplate := ""
 	for _, balance := range balances {
 		m, _ := strconv.Atoi(balance.Month)
