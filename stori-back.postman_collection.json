@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "2bc3f086-39fb-4cb8-9439-7f126c79f3fb",
+		"name": "stori-back",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "process file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/eduardoguruhotel/dev/stori-back/function/examples/transactions.csv"
+						},
+						{
+							"key": "email",
+							"value": "itenriquez.isc@gmail.com",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/{{customerId}}/transactions",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"{{customerId}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get transaction",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/eduardoguruhotel/dev/stori-back/function/examples/transactions.csv",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/{{customerId}}/transactions/d5ced0b5-2047-4fd9-af01-d50f894a862e",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"{{customerId}}",
+						"transactions",
+						"d5ced0b5-2047-4fd9-af01-d50f894a862e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list transactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/eduardoguruhotel/dev/stori-back/function/examples/transactions.csv",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/{{customerId}}/transactions",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"{{customerId}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "https://9l5h80a19i.execute-api.us-east-1.amazonaws.com/prod",
+			"type": "default"
+		},
+		{
+			"key": "customerId",
+			"value": "1",
+			"type": "default"
+		}
+	]
+}
